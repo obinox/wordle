@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="src.js" type="text/javascript"></script>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body class="vars">
+        <header>
+            <h1 class="text">WORDLE</h1>
+        </header>
+        <main>
+            <div class="modal-container"></div>
+            <div class="interactive-area words">
+                <div class="word-grid" style="width: 350px; height: 420px">
+                    <div class="word-grid-row">
+                        <div class="word-grid-element" data-state="empty"></div>
+                        <div class="word-grid-element" data-state="empty"></div>
+                        <div class="word-grid-element" data-state="empty"></div>
+                        <div class="word-grid-element" data-state="empty"></div>
+                        <div class="word-grid-element" data-state="empty"></div>
+                    </div>
+                    <div class="word-grid-row">
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                    </div>
+                    <div class="word-grid-row">
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                    </div>
+                    <div class="word-grid-row">
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                    </div>
+                    <div class="word-grid-row">
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                    </div>
+                    <div class="word-grid-row">
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-area">
+                <div class="key-grid" style="width: 480px; height: 200px">
+                    <div class="key-grid-row1">
+                        <button class="key-grid-element" data-state="tbd" data-key="q">Q</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="w">W</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="e">E</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="r">R</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="t">T</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="y">Y</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="u">U</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="i">I</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="o">O</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="p">P</button>
+                    </div>
+                    <div class="key-grid-row2">
+                        <div class="key-grid-left">
+                            <div></div>
+                            <button class="key-grid-element" data-state="tbd" data-key="a">A</button>
+                        </div>
+                        <button class="key-grid-element" data-state="tbd" data-key="s">S</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="d">D</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="f">F</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="g">G</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="h">H</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="j">J</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="k">K</button>
+                        <div class="key-grid-right">
+                            <button class="key-grid-element" data-state="tbd" data-key="l">L</button>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="key-grid-row2">
+                        <button class="key-grid-element key-func key-enter" data-state="tbd">enter</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="z">Z</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="x">X</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="c">C</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="v">V</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="b">B</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="n">N</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="m">M</button>
+                        <button class="key-grid-element key-func key-del" data-state="tbd">backsp</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+</html>
