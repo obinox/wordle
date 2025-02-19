@@ -35,10 +35,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .interactive-area.words {
     height: calc(100vh - 400px);
+}
+.interactive-area.keys {
+    bottom: 10px;
 }
 
 body {
@@ -160,6 +164,10 @@ body {
     user-select: none;
 }
 
+.key-grid-element:focus {
+    outline: none;
+}
+
 .key-func {
     font-size: 0.75em;
 }
@@ -173,6 +181,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 
 .modal {
@@ -203,11 +212,11 @@ body {
     opacity: 0;
 }
 
-.win {
-    animation-name: Bounce;
+.word-grid-element[data-animation="win"] {
+    animation-name: bounce;
     animation-duration: 1000ms;
 }
-@keyframes Bounce {
+@keyframes bounce {
     0%,
     20% {
         transform: translateY(0);
@@ -229,11 +238,11 @@ body {
     }
 }
 
-.invalid {
-    animation-name: Shake;
+.word-grid-element[data-animation="invalid"] {
+    animation-name: invalid;
     animation-duration: 600ms;
 }
-@keyframes Shake {
+@keyframes invalid {
     10%,
     90% {
         transform: translateX(-1px);
@@ -257,10 +266,10 @@ body {
 }
 
 .word-grid-element[data-animation="pop"] {
-    animation-name: PopIn;
+    animation-name: pop;
     animation-duration: 100ms;
 }
-@keyframes PopIn {
+@keyframes pop {
     from {
         transform: scale(0.8);
         opacity: 0;
@@ -273,11 +282,11 @@ body {
 }
 
 .word-grid-element[data-animation="flip-in"] {
-    animation-name: FlipIn;
+    animation-name: flipin;
     animation-duration: 250ms;
     animation-timing-function: ease-in;
 }
-@keyframes FlipIn {
+@keyframes flipin {
     0% {
         transform: rotateX(0);
     }
@@ -287,11 +296,11 @@ body {
 }
 
 .word-grid-element[data-animation="flip-out"] {
-    animation-name: FlipOut;
+    animation-name: flipout;
     animation-duration: 250ms;
     animation-timing-function: ease-in;
 }
-@keyframes FlipOut {
+@keyframes flipout {
     0% {
         transform: rotateX(-90deg);
     }

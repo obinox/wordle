@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <script src="src.js" type="text/javascript"></script>
+        <script src="words.js" type="module"></script>
+        <script src="src.js" type="module"></script>
         <link href="style.css" rel="stylesheet" />
     </head>
     <body class="vars">
@@ -13,11 +14,11 @@
             <div class="interactive-area words">
                 <div class="word-grid" style="width: 350px; height: 420px">
                     <div class="word-grid-row">
-                        <div class="word-grid-element" data-state="empty"></div>
-                        <div class="word-grid-element" data-state="empty"></div>
-                        <div class="word-grid-element" data-state="empty"></div>
-                        <div class="word-grid-element" data-state="empty"></div>
-                        <div class="word-grid-element" data-state="empty"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
+                        <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
                     </div>
                     <div class="word-grid-row">
                         <div class="word-grid-element" data-state="empty" data-animation="idle"></div>
@@ -56,47 +57,47 @@
                     </div>
                 </div>
             </div>
-            <div class="interactive-area">
+            <div class="interactive-area keys">
                 <div class="key-grid" style="width: 480px; height: 200px">
                     <div class="key-grid-row1">
-                        <button class="key-grid-element" data-state="tbd" data-key="q">Q</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="w">W</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="e">E</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="r">R</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="t">T</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="y">Y</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="u">U</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="i">I</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="o">O</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="p">P</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="q" type="button">Q</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="w" type="button">W</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="e" type="button">E</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="r" type="button">R</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="t" type="button">T</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="y" type="button">Y</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="u" type="button">U</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="i" type="button">I</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="o" type="button">O</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="p" type="button">P</button>
                     </div>
                     <div class="key-grid-row2">
                         <div class="key-grid-left">
                             <div></div>
-                            <button class="key-grid-element" data-state="tbd" data-key="a">A</button>
+                            <button class="key-grid-element" data-state="tbd" data-key="a" type="button">A</button>
                         </div>
-                        <button class="key-grid-element" data-state="tbd" data-key="s">S</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="d">D</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="f">F</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="g">G</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="h">H</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="j">J</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="k">K</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="s" type="button">S</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="d" type="button">D</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="f" type="button">F</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="g" type="button">G</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="h" type="button">H</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="j" type="button">J</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="k" type="button">K</button>
                         <div class="key-grid-right">
-                            <button class="key-grid-element" data-state="tbd" data-key="l">L</button>
+                            <button class="key-grid-element" data-state="tbd" data-key="l" type="button">L</button>
                             <div></div>
                         </div>
                     </div>
                     <div class="key-grid-row2">
-                        <button class="key-grid-element key-func key-enter" data-state="tbd">enter</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="z">Z</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="x">X</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="c">C</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="v">V</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="b">B</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="n">N</button>
-                        <button class="key-grid-element" data-state="tbd" data-key="m">M</button>
-                        <button class="key-grid-element key-func key-del" data-state="tbd">backsp</button>
+                        <button class="key-grid-element key-func key-enter" data-state="tbd" type="button">enter</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="z" type="button">Z</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="x" type="button">X</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="c" type="button">C</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="v" type="button">V</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="b" type="button">B</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="n" type="button">N</button>
+                        <button class="key-grid-element" data-state="tbd" data-key="m" type="button">M</button>
+                        <button class="key-grid-element key-func key-del" data-state="tbd" type="button">backsp</button>
                     </div>
                 </div>
             </div>
