@@ -38,7 +38,7 @@
 }
 
 .interactive-area.words {
-    height: 80vh;
+    height: calc(100vh - 400px);
 }
 
 body {

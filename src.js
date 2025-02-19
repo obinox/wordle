@@ -213,4 +213,8 @@ window.onload = () => {
 
     const enterkey = document.querySelector(".key-enter");
     enterkey.onclick = enterword;
+
+    document.addEventListener("keydown", (e) => {
+        console.log(e);
+    });
 };
