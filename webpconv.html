@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webp to png</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webp-hero/0.10.1/webp-hero.min.js"></script> 
+</head>
+<body>
+    <h1>webp to png</h1>
+    
+    <input type="file" id="webps" multiple accept=".webp">
+    <button onclick="convert()">convert</button>
+    
+    <div id="output"></div>
+
+    <script>
+        function convert() {
+            const files = document.getElementById('webps').files;
+            const out = document.getElementById('output');
+            out.innerHTML = ''; 
+
+            if (files.length === 0) {
+                alert('파일을 선택해 주세요.');
+                return;
+            }
+
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.src = e.target.result;
+
+                    img.onload = function() {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+
+                        canvas.toBlob((blob) => {
+                            const link = document.createElement('a');
+                            link.href = URL.createObjectURL(blob);
+                            link.download = file.name.replace('.webp', '.png');
+                            link.textContent = 'Download ' + file.name.replace('.webp', '.png');
+                            out.appendChild(link);
+                            out.appendChild(document.createElement('br'));
+                        }, 'image/png');
+                    };
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
+</body>
+</html>
